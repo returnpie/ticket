@@ -1,6 +1,5 @@
 import {
   Listener,
-  NotFoundError,
   OrderStatus,
   PaymentCreatedEvent,
   Subjects,

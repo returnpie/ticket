@@ -5,8 +5,8 @@ import cookieSession from "cookie-session";
 import { errorHandler, NotFoundError, currentUser } from "@rpticket/common";
 
 import { createTicketRouter } from "./routes/create";
-import { showTicketRouter } from "./routes/show";
 import { indexTicketRouter } from "./routes/index";
+import { showTicketRouter } from "./routes/show";
 import { updateTicketRouter } from "./routes/update";
 
 const app = express();
@@ -22,8 +22,8 @@ app.use(
 app.use(currentUser);
 
 app.use(createTicketRouter);
-app.use(showTicketRouter);
 app.use(indexTicketRouter);
+app.use(showTicketRouter);
 app.use(updateTicketRouter);
 
 app.get("*", async (req: Request, res: Response) => {
