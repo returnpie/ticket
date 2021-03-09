@@ -9,7 +9,7 @@ build:
   googleCloudBuild:
     projectId: ticket-dev-303715
   artifacts:
-    - image: us.gcr.io/ticket-dev-303715/auth
+    - image: returnpie/auth
       context: auth
       docker:
         dockerfile: Dockerfile
@@ -17,7 +17,7 @@ build:
         manual:
           - src: "src/**/*.ts"
             dest: .
-    - image: us.gcr.io/ticket-dev-303715/client
+    - image: returnpie/client
       context: client
       docker:
         dockerfile: Dockerfile
@@ -25,7 +25,7 @@ build:
         manual:
           - src: "**/*.js"
             dest: .
-    - image: us.gcr.io/ticket-dev-303715/tickets
+    - image: returnpie/tickets
       context: tickets
       docker:
         dockerfile: Dockerfile
@@ -33,7 +33,7 @@ build:
         manual:
           - src: "src/**/*.ts"
             dest: .
-    - image: us.gcr.io/ticket-dev-303715/orders
+    - image: returnpie/orders
       context: orders
       docker:
         dockerfile: Dockerfile
@@ -41,7 +41,7 @@ build:
         manual:
           - src: "src/**/*.ts"
             dest: .
-    - image: us.gcr.io/ticket-dev-303715/expiration
+    - image: returnpie/expiration
       context: expiration
       docker:
         dockerfile: Dockerfile
@@ -49,7 +49,7 @@ build:
         manual:
           - src: "src/**/*.ts"
             dest: .
-    - image: us.gcr.io/ticket-dev-303715/payments
+    - image: returnpie/payments
       context: payments
       docker:
         dockerfile: Dockerfile

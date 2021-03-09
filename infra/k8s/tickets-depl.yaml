@@ -14,14 +14,14 @@ spec:
     spec:
       containers:
         - name: tickets
-          image: us.gcr.io/ticket-dev-303715/tickets
+          image: returnpie/tickets
           env:
             - name: NATS_CLIENT_ID
               valueFrom:
                 fieldRef:
                   fieldPath: metadata.name
             - name: NATS_URL
-              value: 'http://nats-srv:4222'
+              value: "http://nats-srv:4222"
             - name: NATS_CLUSTER_ID
               value: ticket
             - name: MONGO_URI
